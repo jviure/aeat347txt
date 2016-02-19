@@ -4,7 +4,7 @@ Utilidad para generar la Declaración Anual de Operaciones con Terceros. Realiza
 
 Ejemplo:
 
-<code>
+<code><pre>
 $declarados = array(
 	array(
 		"nif_perceptor" => "A09029414",
@@ -47,4 +47,4 @@ $aeat357 = new AEAT347($declarados, $ejercicio, "B99999999", "Nombre empresa", "
 $aeat357->GenDeclaranteLine();
 $aeat357->GenDeclaradosLines();
 $aeat357->saveFile();
-</code>
+</pre></code>
