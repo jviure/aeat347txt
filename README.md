@@ -48,3 +48,14 @@ $aeat357->GenDeclaranteLine();
 $aeat357->GenDeclaradosLines();
 $aeat357->saveFile();
 </pre></code>
+
+El PDF oficial del BOE se puede obtener en:
+
+<a href="https://www.boe.es/boe/dias/2014/09/26/pdfs/BOE-A-2014-9740.pdf">https://www.boe.es/boe/dias/2014/09/26/pdfs/BOE-A-2014-9740.pdf</a>
+
+Tened en cuenta que la posición "clave" de cada array de la variable $declarados puede tener los valores A, B, C, D, E, F, G.
+
+Si hay algún error notificarmelo por favor a <a href="mailto:jviure@gridek.com">jviure@gridek.com</a>, hice la traducción del VB del XLSM a PHP con relativa prisa!
+
+Saludos,
+
