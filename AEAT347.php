@@ -193,7 +193,7 @@ class AEAT347
 			"OperacionBieneVinculados" => 1,
 			"ImporteCriterioCajaSigno" => 1,
 			"ImporteCriterioCaja" => 1,
-			"V_Blancos" => 201
+			"V_Blancos" => 200
 		);
 		$this->longitudes['C_Comun'] = array(
 			"Modelo" => 3,
@@ -229,7 +229,7 @@ class AEAT347
 
 		//'EJERCICIO
 		$this->declarante->Comun->Ejercicio = $this->ejercicio;
-		$this->declarante->ApellidosYNombre = $this->razonSocial;
+		$this->declarante->ApellidosYNombre = $this->sanear_string($this->razonSocial);
 		$this->declarante->Comun->Modelo = "347"; //Constante
 		$this->declarante->Comun->NIFDeclarante = $this->NIF_Declarante;
 		$this->declarante->PersonaContactoNombre = $this->sanear_string($this->personaContacto);
@@ -279,10 +279,10 @@ class AEAT347
 			//feb 2015:
 			$this->AsignarImporte($declarado['imp_cr_caja'], $D->ImporteCriterioCaja, $D->ImporteCriterioCajaSigno);
 
-			$D->NIF_OPERADOR_COMUNITARIO = $declarado['nif_op_comunitario'];
-			$D->OperacionCriterioCaja = $declarado['op_criterio_caja'];
-			$D->OperacionInversionSujetoPasivo = $declarado['op_inv_sujeto_pasivo'];
-			$D->OperacionBieneVinculados = $declarado['op_biene_vinculados'];
+			$D->NIF_OPERADOR_COMUNITARIO = @$declarado['nif_op_comunitario'];
+			$D->OperacionCriterioCaja = @$declarado['op_criterio_caja'];
+			$D->OperacionInversionSujetoPasivo = @$declarado['op_inv_sujeto_pasivo'];
+			$D->OperacionBieneVinculados = @$declarado['op_biene_vinculados'];
 			//---------------
 
 			$D->Comun = $this->declarante->Comun;
